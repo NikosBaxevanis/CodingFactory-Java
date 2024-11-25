@@ -45,7 +45,7 @@ public class ArraysAsCollections {
 
     public static boolean anyEven (int [] arr) {
         boolean isEven = false;
-        for (i = 1 ; i < arr.length ; i++) {
+        for (int i = 1 ; i < arr.length ; i++) {
             if (arr[i] % 2 == 0) {
                 isEven = true;
                 break;
@@ -57,9 +57,9 @@ public class ArraysAsCollections {
     public static boolean moreThanTwoEvens (int [] arr) {
         boolean isEven = false;
         int count = 0;
-        for (i = 1 ; i < arr.length ; i++) {
+        for (int i = 1 ; i < arr.length ; i++) {
             if (arr[i] % 2 == 0) {
-                count += count
+                count += count;
             }
         }
         return count >2 ;
@@ -84,10 +84,11 @@ public class ArraysAsCollections {
             endings[num %10] ++;
         }
         for (int count : endings) {
-            if (count > = 3) {
-                isSameEnding= true;
+            if (count >= 3) {
+                isSameEnding = true;
             }
         }
+        return isSameEnding;
     }
 
     public static boolean AllAreEven (int [] arr) {
