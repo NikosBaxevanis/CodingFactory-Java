@@ -17,7 +17,7 @@ public class PointMain {
 
         p3.movePlus();
 
-        ((Point2D) P2).setY(15); //downcast , αφού η point δεν έχει την setY
+      //  ((Point2D) P2).setY(15); //downcast , αφού η point δεν έχει την setY
     }
 
     public static void doMovePlus10 (Point point) {
