@@ -1,8 +1,8 @@
-package gr.aueb.cf.ch18.mobilecontacts.model;
+package gr.aueb.cf.MobileContactsConsoleSOA7.mobilecontacts.model;
 
 import java.util.Objects;
 
-public class MobileContact  extends  AbstractEntity{
+public class MobileContact  extends AbstractEntity {
 
     private String firstname;
     private String lastname;
@@ -12,8 +12,7 @@ public class MobileContact  extends  AbstractEntity{
 
     }
 
-    public MobileContact(Long id,String firstname, String lastname, String phoneNumber) {
-        setId(id);
+    public MobileContact(String firstname, String lastname, String phoneNumber) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.phoneNumber = phoneNumber;
