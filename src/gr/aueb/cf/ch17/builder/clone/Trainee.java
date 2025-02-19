@@ -1,10 +1,10 @@
 package gr.aueb.cf.ch17.builder.clone;
 
-public class Trainee implements Cloneable {
+public class Trainee { //implements Cloneable {
     private String name;
     private City city;
 
-    public Trainee () {
+    public Trainee() {
 
     }
 
@@ -15,7 +15,7 @@ public class Trainee implements Cloneable {
 
     public Trainee(Trainee trainee) {
         this.name = trainee.name;
-        this.city =new City(trainee.getCity());
+        this.city = new City(trainee.getCity());
     }
 
     public String getName() {
@@ -36,13 +36,17 @@ public class Trainee implements Cloneable {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Trainee{" +
+                "name='" + name + '\'' +
+                ", city=" + city +
+                '}';
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    protected Trainee clone() throws CloneNotSupportedException {
         Trainee trainee = (Trainee) super.clone();
         trainee.setCity(new City(city.getDescription()));
         return trainee;
     }
+
 }

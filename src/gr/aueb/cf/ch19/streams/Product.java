@@ -1,6 +1,6 @@
 package gr.aueb.cf.ch19.streams;
 
-public class Product implements Comparable<Product> {
+public class Product {
     private String name;
     private double price;
     private int quantity;
@@ -41,8 +41,7 @@ public class Product implements Comparable<Product> {
 
     @Override
     public String toString() {
-        return name  + ", " + price + ", " + quantity;
+        return name + ", " + price + ", " + quantity;
     }
-
 
 }

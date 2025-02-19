@@ -6,13 +6,34 @@ import java.awt.print.Book;
 public class Main {
 
     public static void main(String[] args) {
+//        Knight joa = new Knight();
+//        Knight saintGeorge = new Knight();
+//
+//        joa.embarkOnMission(new IMission() {
+//            @Override
+//            public void embark() {
+//                System.out.println("Save the princess");
+//            }
+//        });
 
-        Book book1 = new Book.Builder(1, "12345").build();
-        Book book2 = new Book.Builder(2, "6789")
-                .author("Th")
-                .title("Java")
-                .build();
+//        saintGeorge.embarkOnMission(new IMission() {
+//            @Override
+//            public void embark() {
+//                // System.out.println("Kill the dragon");
+//                killTheDragon();
+//            }
+//        });
 
+        // saintGeorge.embarkOnMission(() -> killTheDragon());
+//        saintGeorge.embarkOnMission(Main::killTheDragon);
+//        joa.embarkOnMission(Main::saveThePrincess);
+    }
 
+    public static void killTheDragon() {
+        System.out.println("Kill the dragon");
+    }
+
+    public static void saveThePrincess() {
+        System.out.println("Save the princess");
     }
 }

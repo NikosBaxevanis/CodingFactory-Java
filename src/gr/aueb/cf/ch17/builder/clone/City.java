@@ -1,7 +1,6 @@
 package gr.aueb.cf.ch17.builder.clone;
 
 public class City implements Cloneable {
-
     private String description;
 
     public City() {
@@ -10,6 +9,10 @@ public class City implements Cloneable {
 
     public City(String description) {
         this.description = description;
+    }
+
+    public City(City city) {
+        this.description = city.getDescription();
     }
 
     public String getDescription() {
@@ -28,7 +31,7 @@ public class City implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    protected City clone() throws CloneNotSupportedException {
         return (City) super.clone();
     }
 }
