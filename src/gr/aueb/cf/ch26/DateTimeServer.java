@@ -24,7 +24,7 @@ public class DateTimeServer extends  Thread {
             while (true) {
                 Socket connectedFd = servFd.accept(); //Ερχεται του server μια συνδεση την κανει accept και δημιουργειται ενα δευτερο socket το οποιο υλοποιει τη συνδεση
                 BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(connectedFd.getOutputStream()));
-                bw.write(new Date().toString());
+                bw.write( new Date().toString());
                 bw.flush();
                 connectedFd.close();
             }
